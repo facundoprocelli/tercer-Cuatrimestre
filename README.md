@@ -10,3 +10,6 @@ Documentar el progreso y las habilidades adquiridas a lo largo del cuatrimestre 
 
 # Estructura del Repositorio
 El repositorio está organizado por carpetas de cada tema de las materias. 
+
+
+Proximamente añadiremos mas información
