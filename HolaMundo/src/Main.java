@@ -1,10 +1,40 @@
-//import java.util.Scanner;
+import java.util.Scanner;
 
 
 public class Main {
+
+    static Scanner scanner;
+
     public static void main(String[] args) {
 
+        scanner = new Scanner(System.in);
         System.out.println("Hello world!");
+
+        int num1 = scanner.nextInt();
+        int num2 = 5;
+
+        int rta = sumarNumero(num1, num2);
+
+        System.out.println(rta);
+
+
+        scanner.close();
+    }
+
+    public static int sumarNumero(int num1, int num2) {
+
+        return num1 + num2;
+    }
+
+
+    public static  boolean esVerdadero(int numero)
+    {
+        boolean rta = false;
+        if (numero < 18)
+        {
+            rta = true;
+        }
+        return rta;
     }
 }
 
@@ -76,4 +106,8 @@ public class Main {
 *       - Se abre a principio del programam y se cierra a fin del main
 *       - No hay metodos para limpiar la consola
 *       - No manejos de color y sonido
+*
+*
+*       - Todo lo que hagamos en el main esta permitido
+*
 * */
