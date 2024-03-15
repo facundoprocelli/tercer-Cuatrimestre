@@ -16,7 +16,10 @@ public class Main {
         //mostrarPrimos();
 
         //Ejercicio 4
-        mostrarNPrimos();
+        //mostrarNPrimos();
+
+        //Ejercicio 6
+       // probarPrimo(); // No me dice de forma correcta si es o no primo, simepre me dice que no lo es
 
         // Ejercicios 7
         //sumaPrimerosNaturales();
@@ -26,6 +29,9 @@ public class Main {
 
         // Ejercicio 9
         //anioBisiesto();
+
+        //Ejercicio 10
+        encontrarAscii();
 
         scanner.close();
     }
@@ -83,23 +89,20 @@ public class Main {
     public static void mostrarPrimos() {
         int primos = 0;
         int i = 0;
+
         while (primos < 100) {
             boolean esPrimo = true; // Suponemos que es primo inicialmente
-
 
             // Verificamos si i es divisible por algún número distinto de 1 e i
             for (int j = 2; j < i; j++) {
                 if (i % j == 0) {
                     esPrimo = false; // No es primo
-                    break; // Salimos del bucle interno
                 }
             }
 
             if (esPrimo) {
                 System.out.println("El " + i + " es primo");
                 primos++;
-            } else {
-                System.out.println("El " + i + " no es primo");
             }
             i++;
         }
@@ -119,26 +122,45 @@ public class Main {
             for (int j = 2; j < i; j++) {
                 if (i % j == 0) {
                     esPrimo = false;
-                    break;
                 }
             }
 
             if (esPrimo) {
                 System.out.println("El " + i + " es primo");
                 primos++;
-
-            } else {
-                System.out.println("El " + i + " no es primo");
             }
             i++;
-
-
         }
-
-
     }
 
 //Ejercicio nº6: Ingresar un número o tantos como quiera el usuario y revisar si es primo.
+
+    public static void probarPrimo() {
+        boolean esPrimo = true;
+        char rta = 's';
+
+        while (rta == 's') {
+
+            System.out.println("Ingrese un numero Para averiguar si es primo");
+            int num = scanner.nextInt();
+
+            for (int j = 2; j* j <= num; j++) {
+                if (num % j == 0) {
+                    esPrimo = false;
+
+                }
+            }
+
+            if (esPrimo) {
+                System.out.println("El numero " + num + " es primo");
+            } else {
+                System.out.println("El numero " + num + " no es primo");
+            }
+
+            System.out.println("Para seguir presione 's'");
+            rta = scanner.next().charAt(0);
+        }
+    }
 
 
 //Ejercicio nº7: Encontrar la suma de los primeros 10 números naturales.
@@ -198,5 +220,15 @@ public class Main {
 
 //Ejercicio nº10: Encontrar el valor ASCII de un carácter.
 
+    public static void encontrarAscii() {
+
+        System.out.println("Ingrese un caracter");
+        String dato = scanner.nextLine();
+
+        int ascii = dato.codePointAt(0); // La funcion codePointAt(0) Nos devuelve el valor Ascii de el caracter
+                                                // en la posicion 0 del string
+        System.out.println("El codigo ASCII de " + dato + " es " + ascii);
+
+    }
 
 }
