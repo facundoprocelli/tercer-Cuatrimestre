@@ -56,13 +56,24 @@ public class Main {
 
         //Ejercicio 18
         //pitagoras();
+
         //Ejercicio 19
+        //temperatura();
+
         //Ejercicio 20
+        //random();
+
         //Ejercicio 21
+        //diasLaborales();
+
         //Ejercicio 22
+        //conocerCifras();
+
         //Ejercicio 23
+        //CalculadoraPolacaInversaApp();
 
-
+        //Ejercicio 24
+        
 
         scanner.close();
     }
@@ -373,8 +384,7 @@ public class Main {
 //        “Buenos dias nombre_introducido”.
 
 
-
-    public static void saludo(){
+    public static void saludo() {
 
         System.out.println("ingrese su nombre");
         String nombre = scanner.nextLine();
@@ -385,24 +395,21 @@ public class Main {
 //Ejercicio nº14: Escribir un programa que lea un número entero por teclado y obtenga y muestre por pantalla el doble y
 // el triple de ese número.
 
-    public static void mulitplos()
-    {
+    public static void mulitplos() {
 
         System.out.println("Ingrese un numero");
         int dato = scanner.nextInt();
 
-        System.out.println("El numero multiplicado por 2 es " + dato *2);
-        System.out.println("El numero multiplicado por 3 es " + dato *3);
+        System.out.println("El numero multiplicado por 2 es " + dato * 2);
+        System.out.println("El numero multiplicado por 3 es " + dato * 3);
     }
-
 
 
 //Ejercicio nº15: Programa que lea una cantidad de grados centígrados y la pase a grados Fahrenheit.
 // La fórmula correspondiente para pasar de grados centígrados a fahrenheit es:  F = 32 + ( 9 * C / 5)
 
-    public static void centiAFarenheit()
-    {
-        double centigrados, farenheit ;
+    public static void centiAFarenheit() {
+        double centigrados, farenheit;
 
         System.out.println("Ingrese la temperatura actual");
         centigrados = scanner.nextDouble();
@@ -419,7 +426,7 @@ public class Main {
 //Longitud de la circunferencia = 2*PI*Radio, Area de la circunferencia = PI*Radio^2
 
 
-    public static void calcularCirculo(){
+    public static void calcularCirculo() {
 
         double longitud, area, radio;
 
@@ -427,7 +434,7 @@ public class Main {
         radio = scanner.nextDouble();
 
         // Calcular longitud de la circunferencia
-            longitud = 2 * Math.PI * radio;
+        longitud = 2 * Math.PI * radio;
 
         //Calcular area de la circunferencia
 
@@ -443,8 +450,7 @@ public class Main {
 //Ejercicio nº17: Programa que pase una velocidad en Km/h a m/s. La velocidad se lee por teclado.
 
 
-    public static void kiloMetrosAMetros()
-    {
+    public static void kiloMetrosAMetros() {
         double metros, kilometros;
         System.out.println("Ingrese la velocidad en kilometros");
         kilometros = scanner.nextDouble();
@@ -459,15 +465,14 @@ public class Main {
 //Ejercicio nº18: Programa lea la longitud de los catetos de un triángulo rectángulo y calcule la longitud de la hipotenusa
 // según el teorema de Pitágoras.
 
-    public static void pitagoras()
-    {
-        double cat1, cat2, hipo= 0;
+    public static void pitagoras() {
+        double cat1, cat2, hipo = 0;
         System.out.println("Ingrese la longitud del primer cateto");
         cat1 = scanner.nextDouble();
         System.out.println("Ingrese la longitud del primer cateto");
-        cat2= scanner.nextDouble();
+        cat2 = scanner.nextDouble();
 
-        hipo = Math.pow(cat1, 2) + Math.pow(cat2,2);
+        hipo = Math.pow(cat1, 2) + Math.pow(cat2, 2);
         hipo = Math.sqrt(hipo);
 
         System.out.println("La hipotenusa es: " + hipo);
@@ -476,23 +481,171 @@ public class Main {
 
 //Ejercicio nº19: Programa lea 30 temperaturas correspondientes a un mes y calcule el maximo, el minimo y el promedio.
 
-//Ejercicio nº20:Pide por teclado dos números y genera 10 números aleatorios entre esos números. Usa el método Math.random para generar un número entero aleatorio
+    public static void temperatura() {
 
-//Ejercicio nº21:  Crea una aplicación que nos pida un día de la semana y que nos diga si es un día laboral o no. Usa un switch para ello.
-//Ejercicio nº22: Pide por teclado un número entero positivo (debemos controlarlo) y muestra  el número de cifras que tiene. Por ejemplo: si introducimos 1250, nos muestre que tiene 4 cifras. Tendremos que controlar si tiene una o más cifras, al mostrar el mensaje.
 
-/*Ejercicio nº23:  Crea una aplicación llamada CalculadoraPolacaInversaApp, nos pedirá 2 operandos (int) y un signo aritmético (String), según este último se realizará la operación correspondiente. Al final mostrara el resultado en un cuadro de diálogo.
+        double max = Double.NEGATIVE_INFINITY; // Inicializar el máximo con el valor mínimo posible
+        double min = Double.POSITIVE_INFINITY; // Inicializar el mínimo con el valor máximo posible
+        double[] temps = new double[30];
+        double promedio = 0;
+
+
+        for (int i = 0; i < temps.length; i++) {
+            System.out.println("Ingrese la temperatura del día " + i);
+            temps[i] = scanner.nextDouble();
+
+            if (temps[i] > max) {
+                max = temps[i];
+            } else if (temps[i] < min) {
+                min = temps[i];
+            }
+            promedio = promedio + temps[i];
+        }
+
+        promedio = promedio / temps.length;
+
+        System.out.println("La temperatura promedio es " + promedio + " La temperatura maxima es " + max + " y la minima es " + min);
+    }
+
+//Ejercicio nº20:Pide por teclado dos números y genera 10 números aleatorios entre esos números.
+// Usa el método Math.random para generar un número entero aleatorio
+
+
+    public static void random() {
+
+        double aux;
+        System.out.println("Ingrese el primer numero");
+        double num1 = scanner.nextDouble();
+        System.out.println("Ingrese el segundo numero");
+        double num2 = scanner.nextDouble();
+
+        for (int i = 0; i < 10; i++) {
+
+            aux = Math.random() * (num2 - num1) + num1;
+            System.out.println("Numero random " + i + "es " + aux);
+        }
+
+
+    }
+
+//Ejercicio nº21:  Crea una aplicación que nos pida un día de la semana y que nos diga si es un día laboral o no.
+// Usa un switch para ello.
+
+    public static void diasLaborales() {
+
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Ingrese el dia de la semana que desea saber si es laborable o no");
+            String dia = scanner.nextLine();
+            switch (dia) {
+                case "Lunes":
+                    System.out.println("Laborable");
+                    break;
+                case "Martes":
+                    System.out.println("Laborable");
+                    break;
+                case "Miercoles":
+                    System.out.println("Laborable");
+                    break;
+                case "Jueves":
+                    System.out.println("Laborable");
+                    break;
+                case "Viernes":
+                    System.out.println("Laborable");
+                    break;
+                case "Sabado":
+                    System.out.println("No Laborable");
+                    break;
+                case "Domingo":
+                    System.out.println("No Laborable");
+                    break;
+
+                default:
+                    System.out.println("Ingrese un dia valido");
+
+            }
+        }
+
+
+    }
+
+
+//Ejercicio nº22: Pide por teclado un número entero positivo (debemos controlarlo) y muestra  el número de cifras que tiene.
+// Por ejemplo: si introducimos 1250, nos muestre que tiene 4 cifras.
+// Tendremos que controlar si tiene una o más cifras, al mostrar el mensaje.
+
+    public static void conocerCifras(){
+
+        System.out.println("Ingrese un numero");
+        int dato = scanner.nextInt();
+
+        System.out.println("El numero " + dato + " tiene " + (Math.log10(dato) + 1));
+
+    }
+
+/*Ejercicio nº23:  Crea una aplicación llamada CalculadoraPolacaInversaApp, nos pedirá 2 operandos (int)
+y un signo aritmético (String), según este último se realizará la operación correspondiente.
+Al final mostrara el resultado en un cuadro de diálogo.
+
 Los signos aritméticos disponibles son:
         +: suma los dos operandos.
         -: resta los operandos.
-*: multiplica los operandos.
-/: divide los operandos, este debe dar un resultado con decimales (double)
-^:  1º operando como base y 2º como exponente.
-%:  módulo, resto de la división entre operando1 y operando2.
+        *: multiplica los operandos.
+        /: divide los operandos, este debe dar un resultado con decimales (double)
+        ^:  1º operando como base y 2º como exponente.
+        %:  módulo, resto de la división entre operando1 y operando2.
 */
 
+    public static void CalculadoraPolacaInversaApp(){
+
+        int num1, num2;
+        double resultado= -1;
+        String signo;
+
+        for (int i = 0; i < 5; i++){
+            System.out.println("Ingrese el primer numero");
+            num1 = scanner.nextInt();
+            System.out.println("Ingrese el segundo numero");
+            num2 = scanner.nextInt();
+
+            System.out.println("Ingrese el signo que quiere operar \n + = suma \n - = resta \n * = mulitplicación\n / = división \n ^ = elevar el primero al segundo\n % = modulo");
+            scanner.nextLine();
+            signo = scanner.nextLine();
+
+            switch (signo) {
+
+                case "+":
+                    resultado = num1 + num2;
+                    break;
+                case "-":
+                    resultado = num1 - num2;
+                    break;
+                case "*":
+                    resultado = num1 * num2;
+                    break;
+                case "/":
+                    resultado = num1 / num2;
+                    break;
+                case "^":
+                    resultado = Math.pow(num1, num2);
+                    break;
+                case "%":
+                    resultado = num1 % num2;
+                    break;
+                default:
+                    System.out.println("Ingrese un simbolo valido");
+
+            }
+
+            System.out.println("-----------------------------------------------");
+            System.out.println("/ El resultado de su operacion es: " + resultado + "/");
+            System.out.println("-----------------------------------------------");
+        }
+    }
+
+
+
 /*
-Ejercicio nº23: Pide por teclado el nombre, edad y salario y muestra el salario
+Ejercicio nº24: Pide por teclado el nombre, edad y salario y muestra el salario
 
 
 Si es menor de 16 no tiene edad para trabajar
