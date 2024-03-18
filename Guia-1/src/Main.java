@@ -75,6 +75,16 @@ public class Main {
         //Ejercicio 24
         //CalcularSalariosApp();
 
+        //Extra 1
+        //Se repite consigan anterior
+        //Extra 2
+        //Se repite consigna anterior
+        //Extra 3
+        //porcentajesDeGeneros();
+        //Extra 4
+        cuentaBancaria();
+        //Extra 5
+
 
         scanner.close();
     }
@@ -714,5 +724,116 @@ Si es mayor de 60 el salario es un 15 por ciento más
 
     }
 
+
+
+//Extra 3 Crea un programa que pida al usuario el nombre, la edad y el género de varias personas,
+// y muestre por pantalla estadísticas como la edad promedio y el porcentaje de hombres y mujeres y fachas.
+
+    public static void porcentajesDeGeneros()
+    {
+        int hombres = 0;
+        int mujeres = 0;
+        int fachas = 0;
+        double edadPromedio;
+        double porcentajeMujeres = 0;
+        double porcentajeHombres = 0;
+        double porcentajeFachas= 0;
+
+        String nombre;
+        int edad;
+        String genero;
+
+        for(int i = 0; i < 10; i++) {
+
+            System.out.println("Ingrese el genero");
+            genero = scanner.nextLine();
+
+            if(genero.equals("Hombre")){
+                hombres++;
+            }else if(genero.equals("Mujer")){
+                mujeres++;
+            }else if (genero.equals("Facha")){
+                fachas++;
+            } else {
+                System.out.println("Pusiste cualquier genero pa");
+            }
+
+        }
+
+        porcentajeMujeres = (mujeres * 100) / 10;
+        porcentajeHombres = (hombres * 100) / 10;
+        porcentajeFachas = (fachas * 100) / 10;
+
+        System.out.println("Porcentajes: \n -Hombres: " + porcentajeHombres + " -Mujeres: " + porcentajeMujeres + " -Fachas: " + porcentajeFachas);
+
+        }
+
+//Crea un programa que simule una cuenta bancaria, permitiendo al usuario depositar
+// y retirar dinero, y mostrar el saldo actual.
+
+    public static void cuentaBancaria()
+    {
+
+        double saldo = 0;
+        int op = -1;
+        char rta = 's';
+
+        while (rta == 's'){
+
+            System.out.println("1= Depositar\n2= Retirar\n3= Mostrar Saldo");
+            op = scanner.nextInt();
+
+
+            switch(op){
+                case 1:
+                    saldo = depositar(saldo);
+                    break;
+                case 2:
+                    saldo = retirar(saldo);
+                    break;
+                case 3:
+                    mostrarSaldo(saldo);
+                    break;
+            }
+
+            System.out.println("Para seguir presione 's'");
+            rta = scanner.next().charAt(0);
+        }
+        mostrarSaldo(saldo);
+
+
+    }
+
+    public static double depositar(double saldo){
+
+        System.out.println("Ingrese el saldo a depositar");
+        double nuevoSaldo = scanner.nextDouble();
+
+        saldo = saldo + nuevoSaldo;
+
+        return saldo;
+    }
+
+    public  static double retirar(double saldo){
+
+        System.out.println("Ingrese el saldo a retirar");
+        double saldoARetirar = scanner.nextDouble();
+
+        if(saldoARetirar <= saldo){
+
+            saldo = saldo - saldoARetirar;
+        }
+        else {
+            System.out.println("No tiene disponible el monto que indica");
+        }
+
+        return saldo;
+
+    }
+
+    public static void mostrarSaldo(double saldo){
+
+        System.out.println("El saldo disponible es: " + saldo);
+    }
 
 }
