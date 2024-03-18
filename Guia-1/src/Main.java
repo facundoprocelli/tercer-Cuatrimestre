@@ -40,7 +40,28 @@ public class Main {
         //calcularArea();
 
         //Ejercicio 13
-        saludo();
+        //saludo();
+
+        //Ejercicio 14
+        //mulitplos();
+
+        //Ejercicio 15
+        //centiAFarenheit();
+
+        //Ejercicio 16
+        //calcularCirculo();
+
+        //Ejercicio 17
+        //kiloMetrosAMetros();
+
+        //Ejercicio 18
+        //pitagoras();
+        //Ejercicio 19
+        //Ejercicio 20
+        //Ejercicio 21
+        //Ejercicio 22
+        //Ejercicio 23
+
 
 
         scanner.close();
@@ -361,16 +382,97 @@ public class Main {
         System.out.println("Buenos Días " + nombre);
 
     }
-//Ejercicio nº14: Escribir un programa que lea un número entero por teclado y obtenga y muestre por pantalla el doble y el triple de ese número.
+//Ejercicio nº14: Escribir un programa que lea un número entero por teclado y obtenga y muestre por pantalla el doble y
+// el triple de ese número.
 
-//Ejercicio nº15: Programa que lea una cantidad de grados centígrados y la pase a grados Fahrenheit. La fórmula correspondiente para pasar de grados centígrados a fahrenheit es:  F = 32 + ( 9 * C / 5)
+    public static void mulitplos()
+    {
 
-//Ejercicio nº16: Programa que lea por teclado el valor del radio de una circunferencia y calcula y muestra por pantalla la longitud y el área de la circunferencia. Investigar el uso de la librería Math.
+        System.out.println("Ingrese un numero");
+        int dato = scanner.nextInt();
+
+        System.out.println("El numero multiplicado por 2 es " + dato *2);
+        System.out.println("El numero multiplicado por 3 es " + dato *3);
+    }
+
+
+
+//Ejercicio nº15: Programa que lea una cantidad de grados centígrados y la pase a grados Fahrenheit.
+// La fórmula correspondiente para pasar de grados centígrados a fahrenheit es:  F = 32 + ( 9 * C / 5)
+
+    public static void centiAFarenheit()
+    {
+        double centigrados, farenheit ;
+
+        System.out.println("Ingrese la temperatura actual");
+        centigrados = scanner.nextDouble();
+        farenheit = 32 + ((9 * centigrados) / 5);
+
+        System.out.println("La temperatura es °" + centigrados + " en centigrados o °" + farenheit + " en farenheit");
+
+
+    }
+
+
+//Ejercicio nº16: Programa que lea por teclado el valor del radio de una circunferencia
+// y calcula y muestra por pantalla la longitud y el área de la circunferencia. Investigar el uso de la librería Math.
 //Longitud de la circunferencia = 2*PI*Radio, Area de la circunferencia = PI*Radio^2
+
+
+    public static void calcularCirculo(){
+
+        double longitud, area, radio;
+
+        System.out.println("Ingrese el radio de la circunferencia");
+        radio = scanner.nextDouble();
+
+        // Calcular longitud de la circunferencia
+            longitud = 2 * Math.PI * radio;
+
+        //Calcular area de la circunferencia
+
+        area = Math.PI * Math.pow(radio, 2);
+
+        // Mostrar Resultado;
+
+        System.out.println("El Area de la circunferencia es: " + area + "cm y la longitud de la circunferencia es: " + longitud + "cm");
+
+
+    }
 
 //Ejercicio nº17: Programa que pase una velocidad en Km/h a m/s. La velocidad se lee por teclado.
 
-//Ejercicio nº18: Programa lea la longitud de los catetos de un triángulo rectángulo y calcule la longitud de la hipotenusa según el teorema de Pitágoras.
+
+    public static void kiloMetrosAMetros()
+    {
+        double metros, kilometros;
+        System.out.println("Ingrese la velocidad en kilometros");
+        kilometros = scanner.nextDouble();
+
+        metros = kilometros * 1000;
+
+        System.out.println("La velocidad de " + kilometros + "/kmh en metros es " + metros + "/mh");
+
+
+    }
+
+//Ejercicio nº18: Programa lea la longitud de los catetos de un triángulo rectángulo y calcule la longitud de la hipotenusa
+// según el teorema de Pitágoras.
+
+    public static void pitagoras()
+    {
+        double cat1, cat2, hipo= 0;
+        System.out.println("Ingrese la longitud del primer cateto");
+        cat1 = scanner.nextDouble();
+        System.out.println("Ingrese la longitud del primer cateto");
+        cat2= scanner.nextDouble();
+
+        hipo = Math.pow(cat1, 2) + Math.pow(cat2,2);
+        hipo = Math.sqrt(hipo);
+
+        System.out.println("La hipotenusa es: " + hipo);
+
+    }
 
 //Ejercicio nº19: Programa lea 30 temperaturas correspondientes a un mes y calcule el maximo, el minimo y el promedio.
 
