@@ -73,7 +73,8 @@ public class Main {
         //CalculadoraPolacaInversaApp();
 
         //Ejercicio 24
-        
+        //CalcularSalariosApp();
+
 
         scanner.close();
     }
@@ -653,4 +654,65 @@ Entre 19 y 50 años el salario es un 5 por ciento más
 Entre 51 y 60 años el salario es un 10 por ciento más
 Si es mayor de 60 el salario es un 15 por ciento más
 */
+
+    public static void CalcularSalariosApp() {
+
+        String nombre;
+        int edad;
+        double salario;
+
+
+        System.out.println("Ingrese el nombre del empleado");
+
+        nombre = scanner.nextLine();
+
+        System.out.println("Ingrese la edad del empleado");
+
+        edad = scanner.nextInt();
+
+        System.out.println("Ingrese el salario del empleado");
+
+        salario = scanner.nextDouble();
+
+        if(edad > 16) {
+
+
+              if (edad > 18 && edad < 51) {
+                salario = calcularSalarioConAumento(salario, 5);
+            } else if (edad > 50 && edad < 61) {
+                salario = calcularSalarioConAumento(salario, 10);
+            } else if (edad > 60) {
+                salario = calcularSalarioConAumento(salario, 15);
+            }
+
+             mostrarPersona(nombre, edad, salario);
+
+        }
+        else {
+            System.out.println(nombre + " no tiene edad para trabajar");
+        }
+    }
+
+    public static double calcularSalarioConAumento(double salario, int aumento){
+
+        double nuevoSueldo = (salario * aumento) / 100;
+
+        nuevoSueldo = nuevoSueldo + salario;
+
+        return nuevoSueldo;
+    }
+
+    public static void mostrarPersona(String nombre, int edad, double salario){
+
+        System.out.println("****************************");
+        System.out.println("*                          *");
+        System.out.println("* -Nombre: "+ nombre + "              *");
+        System.out.println("* -Edad: "+ edad+ "                   *");
+        System.out.println("* -Salario: "+ salario + "             *");
+        System.out.println("*                          *");
+        System.out.println("****************************");
+
+    }
+
+
 }
