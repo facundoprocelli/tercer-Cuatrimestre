@@ -103,7 +103,9 @@ public class Main {
         //Ejercicio 4
         //calendario();
         //Ejercicio 5
-        cuentaBancariaPlus();
+        //cuentaBancariaPlus();
+        //Ejercicio 6
+        calculadoraDeMasaCorporalApp();
 
 
         scanner.close();
@@ -1056,6 +1058,9 @@ Si es mayor de 60 el salario es un 15 por ciento más
     }
 
 
+//Crea un programa que simule una cuenta bancaria, permitiendo al usuario depositar y retirar dinero, y mostrar el saldo actual.
+//
+
     public static void cuentaBancariaPlus(){
         Cuenta cuenta = new Cuenta();
         char rta = 's';
@@ -1078,33 +1083,60 @@ Si es mayor de 60 el salario es un 15 por ciento más
                 case 2:
                     System.out.println("Ingrese el saldo que desea extraer");
                     double saldo = scanner.nextDouble();
+                    //Compruebo si hay saldo disponible
                     if (saldo > cuenta.getSaldo()) {
                         System.out.println("saldo insuficiente");
                     }else {
                         cuenta.extraerDinero(saldo);
                     }
                     break;
-
-
                 case 3:
                     System.out.println(cuenta.mostrarSaldo());
                     break;
             }
-
-
             System.out.println("Para seguir operando presiones 's'");
             rta = scanner.next().charAt(0);
             scanner.nextLine();
         }
+    }
+    //Crea un programa que pida al usuario su altura y su peso, y muestre por pantalla su índice de masa corporal y si se encuentra en un rango saludable.
 
 
+    public static void calculadoraDeMasaCorporalApp(){
 
+
+            Paciente paciente = new Paciente();
+
+
+        System.out.println("Ingrese su peso");
+        paciente.setPeso( scanner.nextDouble());
+
+        System.out.println("Ingrese su altura en metros");
+        paciente.setAltura(scanner.nextDouble());
+
+        double IMC = paciente.calcularIndiceMasaCorporal();
+
+        if( IMC < 19)
+            System.out.println("Bajo peso");
+
+        else if (IMC >= 19 && IMC < 24 )
+            System.out.println("Peso nomral");
+
+        else if (IMC >= 24 && IMC < 29)
+            System.out.println("Sobre peso");
+
+        else if (IMC >= 29 && IMC <39)
+            System.out.println("Obesidad tipo 1 y 2");
+
+        else
+            System.out.println("Obesidad tipo 3");
 
     }
+
+
+
 }
 
-//Crea un programa que simule una cuenta bancaria, permitiendo al usuario depositar y retirar dinero, y mostrar el saldo actual.
-//
 
-//Crea un programa que pida al usuario su altura y su peso, y muestre por pantalla su índice de masa corporal y si se encuentra en un rango saludable.
+
 
