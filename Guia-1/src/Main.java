@@ -933,8 +933,30 @@ Si es mayor de 60 el salario es un 15 por ciento más
 
 
     }
-    //Crea un programa que pida al usuario el nombre, la edad y el género de varias personas, y muestre por pantalla estadísticas como la edad promedio y el porcentaje de hombres y mujeres.
+    //Crea un programa que pida al usuario el nombre, la edad y el género de varias personas,
+    // y muestre por pantalla estadísticas como la edad promedio y el porcentaje de hombres y mujeres.
     //
+
+    public static void estadisticasDeGeneros(){
+
+        int hombres = 0;
+        int mujeres = 0;
+        int otros = 0;
+        char rta = 's';
+
+        while (rta == 's'){
+
+            
+
+            System.out.println("Ingrese 's' para seguir operando");
+            rta = scanner.next().charAt(0);
+
+
+        }
+
+
+    }
+
     //Crea un programa que pida al usuario una lista de tareas pendientes y muestre por pantalla las tareas más importantes y su fecha de vencimiento.
     //
     //Crea un programa que simule una cuenta bancaria, permitiendo al usuario depositar y retirar dinero, y mostrar el saldo actual.
