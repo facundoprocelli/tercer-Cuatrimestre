@@ -1,3 +1,6 @@
+import modelo.Compra;
+import modelo.Mensaje;
+
 import java.util.Scanner;
 
 public class Main {
@@ -82,8 +85,22 @@ public class Main {
         //Extra 3
         //porcentajesDeGeneros();
         //Extra 4
-        cuentaBancaria();
+        //cuentaBancaria();
         //Extra 5
+
+
+        ///---------------------------------------------------------------------------
+
+        // Ejercicios con clases
+
+        //Ejercicio 1
+        //mensajeUsuario();
+
+        //Ejercicio 1
+        comprar();
+        //Ejercicio 1
+        //Ejercicio 1
+        //Ejercicio 1
 
 
         scanner.close();
@@ -835,5 +852,89 @@ Si es mayor de 60 el salario es un 15 por ciento más
 
         System.out.println("El saldo disponible es: " + saldo);
     }
+
+
+
+    ///---------------------------------------------------------------------------------------
+    ///---------------------------------------------------------------------------------------
+    ///---------------------------------------------------------------------------------------
+    ///---------------------------------------------------------------------------------------
+    ///---------------------------------------------------------------------------------------
+    ///---------------------------------------------------------------------------------------
+
+
+
+
+    // A partir de esta parte son los ejercicios extras en donde se van a aplicar el uso de clases y objetos
+
+
+    //Crea un programa que pida al usuario su nombre y su edad, y muestre por pantalla un mensaje personalizado de bienvenida.
+    //
+
+    public static void mensajeUsuario(){
+
+        Mensaje[] datos = new Mensaje[3];
+
+
+        for(int i = 0; i < datos.length; i++) {
+            datos[i] = new Mensaje();
+
+
+            datos[i].setNombre(scanner.nextLine());
+            datos[i].setEdad(scanner.nextInt());
+            scanner.nextLine();
+
+        }
+
+        for (int i = 0; i < datos.length; i++) {
+
+            System.out.println(datos[i].getInfo());
+        }
+
+
+    }
+
+
+    //Crea un programa que pida al usuario el precio y la cantidad de varios productos, y muestre por pantalla el total de la venta.
+    //
+
+    public static void comprar(){
+
+        int precioFinal = 0;
+        int totalProductos = 0;
+        char rta = 's';
+
+
+
+        while (rta == 's'){
+
+            Compra producto = new Compra();
+            System.out.println("Ingrese el nombre del producto");
+            producto.setNombreProducto(scanner.nextLine());
+            System.out.println("Ingrese el precio del producto");
+            producto.setPrecioProducto(scanner.nextInt());
+            System.out.println("Ingrese la cantidad del producto");
+            producto.setPrecioProducto(scanner.nextInt());
+
+            producto.getInfo();
+
+            precioFinal =+ producto.getPrecioProducto();
+            totalProductos =+ producto.getUnidadesProducto();
+
+            System.out.println("Para seguir operando presione 's'");
+            rta = scanner.next().charAt(0);
+        }
+
+        System.out.println("En el ticket final, esta llevando " + totalProductos + " por un precio final de " + precioFinal);
+
+
+    }
+    //Crea un programa que pida al usuario el nombre, la edad y el género de varias personas, y muestre por pantalla estadísticas como la edad promedio y el porcentaje de hombres y mujeres.
+    //
+    //Crea un programa que pida al usuario una lista de tareas pendientes y muestre por pantalla las tareas más importantes y su fecha de vencimiento.
+    //
+    //Crea un programa que simule una cuenta bancaria, permitiendo al usuario depositar y retirar dinero, y mostrar el saldo actual.
+    //
+    //Crea un programa que pida al usuario su altura y su peso, y muestre por pantalla su índice de masa corporal y si se encuentra en un rango saludable.
 
 }
