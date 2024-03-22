@@ -35,6 +35,8 @@ public class Persona {
         return genero;
     }
 
+
+
     // Setters
 
 
@@ -49,5 +51,14 @@ public class Persona {
     public void setGenero(String genero) {
         this.genero = genero;
     }
+
+    // Otras funciones
+
+
+    public String getInfo(){
+        return ("La persona se llama: " + getNombre() + " es " + getGenero() + " y tiene " + getEdad());
+    }
+
+
 
 }

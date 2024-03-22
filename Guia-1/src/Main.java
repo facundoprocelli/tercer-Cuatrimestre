@@ -1,5 +1,6 @@
 import modelo.Compra;
 import modelo.Mensaje;
+import modelo.Persona;
 
 import java.util.Scanner;
 
@@ -96,9 +97,10 @@ public class Main {
         //Ejercicio 1
         //mensajeUsuario();
 
-        //Ejercicio 1
-        comprar();
-        //Ejercicio 1
+        //Ejercicio 2
+        //comprar();
+        //Ejercicio 3
+        estadisticasDeGeneros();
         //Ejercicio 1
         //Ejercicio 1
 
@@ -946,14 +948,45 @@ Si es mayor de 60 el salario es un 15 por ciento más
 
         while (rta == 's'){
 
-            
+            Persona perso = new Persona();
+
+            System.out.println("Ingrese el Nombre de la persona");
+            perso.setNombre(scanner.nextLine());
+            System.out.println("Ingrese el Genero de la persona");
+            perso.setGenero(scanner.nextLine());
+            System.out.println("Ingrese la Edad de la persona");
+            perso.setEdad(scanner.nextInt());
+            scanner.nextLine();
+
+            System.out.println(perso.getInfo());
+
+            if(perso.getGenero().equals("Hombre")){
+                hombres++;
+            }else if(perso.getGenero().equals("Mujer")){
+                mujeres++;
+            }else{
+                otros++;
+            }
+
 
             System.out.println("Ingrese 's' para seguir operando");
             rta = scanner.next().charAt(0);
-
-
+            scanner.nextLine();
         }
 
+            mostrarPromediosGenero(hombres, mujeres, otros);
+
+    }
+
+    public static void mostrarPromediosGenero(int cantHombres, int cantMujeres, int cantOtros){
+
+      int  total = cantHombres + cantMujeres + cantOtros;
+      float  porcentajeHombres = (cantHombres * 100) / total;
+      float porcentajeMujeres = (cantMujeres* 100) / total;
+      float porcentajeOtros = (cantOtros* 100) / total;
+
+
+        System.out.println("Los resultados son: \nHombres: " + porcentajeHombres + "\nMujeres: " + porcentajeMujeres + "\nOtros: " + porcentajeOtros);
 
     }
 
