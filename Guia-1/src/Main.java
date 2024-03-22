@@ -1,7 +1,4 @@
-import modelo.Compra;
-import modelo.Mensaje;
-import modelo.Persona;
-import modelo.Tarea;
+import modelo.*;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -89,7 +86,6 @@ public class Main {
         //Extra 3
         //porcentajesDeGeneros();
         //Extra 4
-        //cuentaBancaria();
         //Extra 5
 
 
@@ -105,8 +101,9 @@ public class Main {
         //Ejercicio 3
         //estadisticasDeGeneros();
         //Ejercicio 4
-        calendario();
-        //Ejercicio 1
+        //calendario();
+        //Ejercicio 5
+        cuentaBancariaPlus();
 
 
         scanner.close();
@@ -1059,9 +1056,55 @@ Si es mayor de 60 el salario es un 15 por ciento más
     }
 
 
+    public static void cuentaBancariaPlus(){
+        Cuenta cuenta = new Cuenta();
+        char rta = 's';
+
+
+        while (rta == 's'){
+            int op = 0;
+
+            System.out.println("1 = Depositar\n2 = Extraer\n 3 = Ver saldo");
+            op = scanner.nextInt();
+
+
+
+            switch (op) {
+                case 1:
+                    System.out.println("Ingrese el saldo que desea depositar");
+                    cuenta.depositarDinero(scanner.nextDouble());
+                    break;
+
+                case 2:
+                    System.out.println("Ingrese el saldo que desea extraer");
+                    double saldo = scanner.nextDouble();
+                    if (saldo > cuenta.getSaldo()) {
+                        System.out.println("saldo insuficiente");
+                    }else {
+                        cuenta.extraerDinero(saldo);
+                    }
+                    break;
+
+
+                case 3:
+                    System.out.println(cuenta.mostrarSaldo());
+                    break;
+            }
+
+
+            System.out.println("Para seguir operando presiones 's'");
+            rta = scanner.next().charAt(0);
+            scanner.nextLine();
+        }
+
+
+
+
+    }
 }
 
 //Crea un programa que simule una cuenta bancaria, permitiendo al usuario depositar y retirar dinero, y mostrar el saldo actual.
 //
+
 //Crea un programa que pida al usuario su altura y su peso, y muestre por pantalla su índice de masa corporal y si se encuentra en un rango saludable.
 
