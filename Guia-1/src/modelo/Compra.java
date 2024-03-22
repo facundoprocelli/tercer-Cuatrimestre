@@ -14,10 +14,10 @@ public class Compra {
         this.unidades = 0;
     }
 
-    public Compra(String producto, int precio, int unidades) {
-        this.producto = producto;
-        this.precio = precio;
-        this.unidades = unidades;
+    public Compra(String p_producto, int p_precio, int p_unidades) {
+        this.producto = p_producto;
+        this.precio = p_precio;
+        this.unidades = p_unidades;
     }
 
     // Setters

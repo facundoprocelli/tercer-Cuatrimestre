@@ -909,23 +909,27 @@ Si es mayor de 60 el salario es un 15 por ciento más
         while (rta == 's'){
 
             Compra producto = new Compra();
+
             System.out.println("Ingrese el nombre del producto");
             producto.setNombreProducto(scanner.nextLine());
             System.out.println("Ingrese el precio del producto");
             producto.setPrecioProducto(scanner.nextInt());
             System.out.println("Ingrese la cantidad del producto");
-            producto.setPrecioProducto(scanner.nextInt());
+            producto.setUnidadesProducto(scanner.nextInt());
 
-            producto.getInfo();
+            System.out.println(producto.getInfo());
 
-            precioFinal =+ producto.getPrecioProducto();
-            totalProductos =+ producto.getUnidadesProducto();
+            precioFinal += producto.getPrecioFinal();
+            totalProductos += producto.getUnidadesProducto();
 
             System.out.println("Para seguir operando presione 's'");
             rta = scanner.next().charAt(0);
+
+            scanner.nextLine();
+
         }
 
-        System.out.println("En el ticket final, esta llevando " + totalProductos + " por un precio final de " + precioFinal);
+        System.out.println("En el ticket final, esta llevando " + totalProductos + " productos por un precio final de " + precioFinal);
 
 
     }
