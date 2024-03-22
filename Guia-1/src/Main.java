@@ -1006,13 +1006,19 @@ Si es mayor de 60 el salario es un 15 por ciento más
             System.out.println("Ingrese la importancia del 1 al 3, siendo 1 poco importante y 3 muy importante");
             pendientes[i].setImportancia(scanner.nextInt());
 
+
+            // Aca se pide cuantos dias va a durar la tarea
             System.out.println("Ingrese en cuantos dias vence la tarea");
+            //Recibo el tiempo
             int tiempo = scanner.nextInt();
+            // Traigo el la fecha que se puso al momento de crearlo en el Cosntructor
             Calendar c = pendientes[i].getCalendario();
-            c.add(Calendar.DATE,tiempo);
+            // A la fecha que traje le sumo el timepo que me dio el usuario antes
+            c.add(Calendar.DATE, tiempo);
+            // Seteo la fecha del vencimiento nueva
             pendientes[i].setCalendario(c);
 
-            
+            // Muestro la tarea
             System.out.println(pendientes[i].getTarea());
             scanner.nextLine();
         }
@@ -1034,7 +1040,6 @@ Si es mayor de 60 el salario es un 15 por ciento más
             case 2:
                 mostrarTareasImportancia(p_tarea, 2);
                 break;
-
             case 3:
                 mostrarTareasImportancia(p_tarea, 3);
                 break;
