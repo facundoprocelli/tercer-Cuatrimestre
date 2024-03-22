@@ -1,7 +1,10 @@
 import modelo.Compra;
 import modelo.Mensaje;
 import modelo.Persona;
+import modelo.Tarea;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Scanner;
 
 public class Main {
@@ -100,8 +103,9 @@ public class Main {
         //Ejercicio 2
         //comprar();
         //Ejercicio 3
-        estadisticasDeGeneros();
-        //Ejercicio 1
+        //estadisticasDeGeneros();
+        //Ejercicio 4
+        calendario();
         //Ejercicio 1
 
 
@@ -603,7 +607,7 @@ public class Main {
 // Por ejemplo: si introducimos 1250, nos muestre que tiene 4 cifras.
 // Tendremos que controlar si tiene una o más cifras, al mostrar el mensaje.
 
-    public static void conocerCifras(){
+    public static void conocerCifras() {
 
         System.out.println("Ingrese un numero");
         int dato = scanner.nextInt();
@@ -625,13 +629,13 @@ Los signos aritméticos disponibles son:
         %:  módulo, resto de la división entre operando1 y operando2.
 */
 
-    public static void CalculadoraPolacaInversaApp(){
+    public static void CalculadoraPolacaInversaApp() {
 
         int num1, num2;
-        double resultado= -1;
+        double resultado = -1;
         String signo;
 
-        for (int i = 0; i < 5; i++){
+        for (int i = 0; i < 5; i++) {
             System.out.println("Ingrese el primer numero");
             num1 = scanner.nextInt();
             System.out.println("Ingrese el segundo numero");
@@ -703,10 +707,10 @@ Si es mayor de 60 el salario es un 15 por ciento más
 
         salario = scanner.nextDouble();
 
-        if(edad > 16) {
+        if (edad > 16) {
 
 
-              if (edad > 18 && edad < 51) {
+            if (edad > 18 && edad < 51) {
                 salario = calcularSalarioConAumento(salario, 5);
             } else if (edad > 50 && edad < 61) {
                 salario = calcularSalarioConAumento(salario, 10);
@@ -714,15 +718,14 @@ Si es mayor de 60 el salario es un 15 por ciento más
                 salario = calcularSalarioConAumento(salario, 15);
             }
 
-             mostrarPersona(nombre, edad, salario);
+            mostrarPersona(nombre, edad, salario);
 
-        }
-        else {
+        } else {
             System.out.println(nombre + " no tiene edad para trabajar");
         }
     }
 
-    public static double calcularSalarioConAumento(double salario, int aumento){
+    public static double calcularSalarioConAumento(double salario, int aumento) {
 
         double nuevoSueldo = (salario * aumento) / 100;
 
@@ -731,47 +734,45 @@ Si es mayor de 60 el salario es un 15 por ciento más
         return nuevoSueldo;
     }
 
-    public static void mostrarPersona(String nombre, int edad, double salario){
+    public static void mostrarPersona(String nombre, int edad, double salario) {
 
         System.out.println("****************************");
         System.out.println("*                          *");
-        System.out.println("* -Nombre: "+ nombre + "              *");
-        System.out.println("* -Edad: "+ edad+ "                   *");
-        System.out.println("* -Salario: "+ salario + "             *");
+        System.out.println("* -Nombre: " + nombre + "              *");
+        System.out.println("* -Edad: " + edad + "                   *");
+        System.out.println("* -Salario: " + salario + "             *");
         System.out.println("*                          *");
         System.out.println("****************************");
 
     }
 
 
-
 //Extra 3 Crea un programa que pida al usuario el nombre, la edad y el género de varias personas,
 // y muestre por pantalla estadísticas como la edad promedio y el porcentaje de hombres y mujeres y fachas.
 
-    public static void porcentajesDeGeneros()
-    {
+    public static void porcentajesDeGeneros() {
         int hombres = 0;
         int mujeres = 0;
         int fachas = 0;
         double edadPromedio;
         double porcentajeMujeres = 0;
         double porcentajeHombres = 0;
-        double porcentajeFachas= 0;
+        double porcentajeFachas = 0;
 
         String nombre;
         int edad;
         String genero;
 
-        for(int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
 
             System.out.println("Ingrese el genero");
             genero = scanner.nextLine();
 
-            if(genero.equals("Hombre")){
+            if (genero.equals("Hombre")) {
                 hombres++;
-            }else if(genero.equals("Mujer")){
+            } else if (genero.equals("Mujer")) {
                 mujeres++;
-            }else if (genero.equals("Facha")){
+            } else if (genero.equals("Facha")) {
                 fachas++;
             } else {
                 System.out.println("Pusiste cualquier genero pa");
@@ -785,25 +786,24 @@ Si es mayor de 60 el salario es un 15 por ciento más
 
         System.out.println("Porcentajes: \n -Hombres: " + porcentajeHombres + " -Mujeres: " + porcentajeMujeres + " -Fachas: " + porcentajeFachas);
 
-        }
+    }
 
 //Crea un programa que simule una cuenta bancaria, permitiendo al usuario depositar
 // y retirar dinero, y mostrar el saldo actual.
 
-    public static void cuentaBancaria()
-    {
+    public static void cuentaBancaria() {
 
         double saldo = 0;
         int op = -1;
         char rta = 's';
 
-        while (rta == 's'){
+        while (rta == 's') {
 
             System.out.println("1= Depositar\n2= Retirar\n3= Mostrar Saldo");
             op = scanner.nextInt();
 
 
-            switch(op){
+            switch (op) {
                 case 1:
                     saldo = depositar(saldo);
                     break;
@@ -823,7 +823,7 @@ Si es mayor de 60 el salario es un 15 por ciento más
 
     }
 
-    public static double depositar(double saldo){
+    public static double depositar(double saldo) {
 
         System.out.println("Ingrese el saldo a depositar");
         double nuevoSaldo = scanner.nextDouble();
@@ -833,16 +833,15 @@ Si es mayor de 60 el salario es un 15 por ciento más
         return saldo;
     }
 
-    public  static double retirar(double saldo){
+    public static double retirar(double saldo) {
 
         System.out.println("Ingrese el saldo a retirar");
         double saldoARetirar = scanner.nextDouble();
 
-        if(saldoARetirar <= saldo){
+        if (saldoARetirar <= saldo) {
 
             saldo = saldo - saldoARetirar;
-        }
-        else {
+        } else {
             System.out.println("No tiene disponible el monto que indica");
         }
 
@@ -850,21 +849,18 @@ Si es mayor de 60 el salario es un 15 por ciento más
 
     }
 
-    public static void mostrarSaldo(double saldo){
+    public static void mostrarSaldo(double saldo) {
 
         System.out.println("El saldo disponible es: " + saldo);
     }
 
 
-
     ///---------------------------------------------------------------------------------------
     ///---------------------------------------------------------------------------------------
     ///---------------------------------------------------------------------------------------
     ///---------------------------------------------------------------------------------------
     ///---------------------------------------------------------------------------------------
     ///---------------------------------------------------------------------------------------
-
-
 
 
     // A partir de esta parte son los ejercicios extras en donde se van a aplicar el uso de clases y objetos
@@ -873,12 +869,12 @@ Si es mayor de 60 el salario es un 15 por ciento más
     //Crea un programa que pida al usuario su nombre y su edad, y muestre por pantalla un mensaje personalizado de bienvenida.
     //
 
-    public static void mensajeUsuario(){
+    public static void mensajeUsuario() {
 
         Mensaje[] datos = new Mensaje[3];
 
 
-        for(int i = 0; i < datos.length; i++) {
+        for (int i = 0; i < datos.length; i++) {
             datos[i] = new Mensaje();
 
 
@@ -900,15 +896,14 @@ Si es mayor de 60 el salario es un 15 por ciento más
     //Crea un programa que pida al usuario el precio y la cantidad de varios productos, y muestre por pantalla el total de la venta.
     //
 
-    public static void comprar(){
+    public static void comprar() {
 
         int precioFinal = 0;
         int totalProductos = 0;
         char rta = 's';
 
 
-
-        while (rta == 's'){
+        while (rta == 's') {
 
             Compra producto = new Compra();
 
@@ -939,14 +934,14 @@ Si es mayor de 60 el salario es un 15 por ciento más
     // y muestre por pantalla estadísticas como la edad promedio y el porcentaje de hombres y mujeres.
     //
 
-    public static void estadisticasDeGeneros(){
+    public static void estadisticasDeGeneros() {
 
         int hombres = 0;
         int mujeres = 0;
         int otros = 0;
         char rta = 's';
 
-        while (rta == 's'){
+        while (rta == 's') {
 
             Persona perso = new Persona();
 
@@ -960,11 +955,11 @@ Si es mayor de 60 el salario es un 15 por ciento más
 
             System.out.println(perso.getInfo());
 
-            if(perso.getGenero().equals("Hombre")){
+            if (perso.getGenero().equals("Hombre")) {
                 hombres++;
-            }else if(perso.getGenero().equals("Mujer")){
+            } else if (perso.getGenero().equals("Mujer")) {
                 mujeres++;
-            }else{
+            } else {
                 otros++;
             }
 
@@ -974,16 +969,18 @@ Si es mayor de 60 el salario es un 15 por ciento más
             scanner.nextLine();
         }
 
-            mostrarPromediosGenero(hombres, mujeres, otros);
+        mostrarPromediosGenero(hombres, mujeres, otros);
 
     }
 
-    public static void mostrarPromediosGenero(int cantHombres, int cantMujeres, int cantOtros){
 
-      int  total = cantHombres + cantMujeres + cantOtros;
-      float  porcentajeHombres = (cantHombres * 100) / total;
-      float porcentajeMujeres = (cantMujeres* 100) / total;
-      float porcentajeOtros = (cantOtros* 100) / total;
+    //Funcion que calcula los promedios de los generos
+    public static void mostrarPromediosGenero(int cantHombres, int cantMujeres, int cantOtros) {
+
+        int total = cantHombres + cantMujeres + cantOtros;
+        float porcentajeHombres = (cantHombres * 100) / total;
+        float porcentajeMujeres = (cantMujeres * 100) / total;
+        float porcentajeOtros = (cantOtros * 100) / total;
 
 
         System.out.println("Los resultados son: \nHombres: " + porcentajeHombres + "\nMujeres: " + porcentajeMujeres + "\nOtros: " + porcentajeOtros);
@@ -992,8 +989,74 @@ Si es mayor de 60 el salario es un 15 por ciento más
 
     //Crea un programa que pida al usuario una lista de tareas pendientes y muestre por pantalla las tareas más importantes y su fecha de vencimiento.
     //
-    //Crea un programa que simule una cuenta bancaria, permitiendo al usuario depositar y retirar dinero, y mostrar el saldo actual.
-    //
-    //Crea un programa que pida al usuario su altura y su peso, y muestre por pantalla su índice de masa corporal y si se encuentra en un rango saludable.
+
+    public static void calendario() {
+
+
+        Tarea[] pendientes = new Tarea[5];
+
+        int i = 0;
+        for (i = 0; i < pendientes.length; i++) {
+
+            pendientes[i] = new Tarea();
+
+            System.out.println("Ingrese el nombre de la tarea");
+            pendientes[i].setNombreTarea(scanner.nextLine());
+
+            System.out.println("Ingrese la importancia del 1 al 3, siendo 1 poco importante y 3 muy importante");
+            pendientes[i].setImportancia(scanner.nextInt());
+
+            System.out.println("Ingrese en cuantos dias vence la tarea");
+            int tiempo = scanner.nextInt();
+            Calendar c = pendientes[i].getCalendario();
+            c.add(Calendar.DATE,tiempo);
+            pendientes[i].setCalendario(c);
+
+            
+            System.out.println(pendientes[i].getTarea());
+            scanner.nextLine();
+        }
+        mostrarSegunImportancia(pendientes);
+
+    }
+
+    public static void mostrarSegunImportancia(Tarea[] p_tarea) {
+
+        int opcion = 0;
+        System.out.println("Ingrese la importancia que desea mostrar 1,2 o 3");
+        opcion = scanner.nextInt();
+
+        switch (opcion) {
+
+            case 1:
+                mostrarTareasImportancia(p_tarea, 1);
+                break;
+            case 2:
+                mostrarTareasImportancia(p_tarea, 2);
+                break;
+
+            case 3:
+                mostrarTareasImportancia(p_tarea, 3);
+                break;
+        }
+    }
+
+    public static void mostrarTareasImportancia(Tarea[] p_tarea, int importancia) {
+
+
+        for (int i = 0; i < p_tarea.length; i++) {
+
+            if (p_tarea[i].getImportancia() == importancia) {
+                System.out.println(p_tarea[i].getTarea());
+            }
+        }
+
+    }
+
 
 }
+
+//Crea un programa que simule una cuenta bancaria, permitiendo al usuario depositar y retirar dinero, y mostrar el saldo actual.
+//
+//Crea un programa que pida al usuario su altura y su peso, y muestre por pantalla su índice de masa corporal y si se encuentra en un rango saludable.
+
