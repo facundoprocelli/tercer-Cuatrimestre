@@ -12,21 +12,29 @@ public class Persona {
     int peso;
     int altura;
     String genero;
+    int edad;
 
 
     // Creo el constructor vacio con [alt] + [insert]
     public Persona() {
+        this.nombre = "sin nombre";
+        this.apellido = "sin apellido";
+        this.peso = 0;
+        this.altura = 0;
+        this.genero = "sin genero";
+        this.edad = 0;
 
 
     }
 
     // Creo el constructor completo con [alt] + [insert]
-    public Persona(String nombre, String apellido, int peso, int altura, String genero) {
+    public Persona(String nombre, String apellido, int peso, int altura, String genero, int edad) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.peso = peso;
         this.altura = altura;
         this.genero = genero;
+        this.edad = edad;
     }
 
     // Creo todos los getters y Setters con [alt]+[insert]
@@ -69,5 +77,13 @@ public class Persona {
 
     public void setAltura(int altura) {
         this.altura = altura;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
 }
