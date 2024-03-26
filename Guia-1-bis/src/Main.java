@@ -9,11 +9,18 @@ public class Main {
     public static void main(String[] args) {
         scan = new Scanner(System.in);
 
-        Curso curso = new Curso();
+        Curso[] cursos = new Curso[2];
 
-        cargarCursos(curso);
+        for(int i = 0; i < cursos.length; i++){
+            Curso cursito = new Curso();
+            cargarCursos(cursito);
+            cursos[i] = cursito;
+        }
 
-        System.out.println(curso.imprimirEstudiantes());
+        for (int k = 0; k < cursos.length; k++){
+            System.out.println("------- " + cursos[k].getNombre() + " -------");
+            System.out.println(cursos[k].imprimirEstudiantes());
+        }
     }
 
     public static void cargarCursos(Curso cursos) {
