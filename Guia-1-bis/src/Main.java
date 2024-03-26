@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         scan = new Scanner(System.in);
 
-        Curso[] cursos = new Curso[2];
+        Curso[] cursos = new Curso[1];
 
         for(int i = 0; i < cursos.length; i++){
             Curso cursito = new Curso();
@@ -20,6 +20,7 @@ public class Main {
         for (int k = 0; k < cursos.length; k++){
             System.out.println("------- " + cursos[k].getNombre() + " -------");
             System.out.println(cursos[k].imprimirEstudiantes());
+            System.out.println("El promedio general es: " + cursos[k].obtenerPromedioGeneral());
         }
     }
 
