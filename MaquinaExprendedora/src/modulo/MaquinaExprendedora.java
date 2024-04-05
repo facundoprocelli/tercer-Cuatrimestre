@@ -95,6 +95,8 @@ public class MaquinaExprendedora {
         return vuelto;
     }
 
+
+    // Metodo para imprimir el boleto
     public  Boleto imprimir(){
         Boleto miBoleto = null;
 
@@ -107,10 +109,11 @@ public class MaquinaExprendedora {
                 cantBoletosDisponibles--;
                 boletosVendidos++;
                 reiniciarSaldo();
-
         }
         return miBoleto;
     }
+
+    // Metodo para calcular el vuelto
 
     private void darVuelto(){
 
@@ -123,25 +126,38 @@ public class MaquinaExprendedora {
         }
     }
 
+
+    // Metodos para reinicar parametros de la maquina exprendedora
     private void reiniciarSaldo(){
         saldo = 0;
+    }
+
+    public   void reiniciarVuelto(){
+        vuelto = 0;
     }
 
     private void vaciarMaquina(){
         this.recaudacion = 0;
     }
+
+
+    // Metodo para retirar dinero
     public String retirarDinero(){
         double recaudacion = this.recaudacion;
         vaciarMaquina();
         return "Acaba de retirar un total de " + recaudacion + " y el saldo esta en 0";
     }
 
+
+    // Metodo para cambiar el estado de la maquina
     public void cambiarEstado(){
         if(this.isEstado())
             this.setEstado(false);
         else this.setEstado(true);
     }
 
+
+    // Metodo para conocer el estado de la maquina
     public String recibirEstado() {
 
         String mensaje= "s";

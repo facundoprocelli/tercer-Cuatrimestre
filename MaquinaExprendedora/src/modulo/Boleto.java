@@ -38,13 +38,7 @@ public class Boleto {
         return nroBoleto;
     }
 
-    private void setPrecio(int precio) {
-        this.precio = precio;
-    }
 
-    private void setFecha(Date fecha) {
-        this.fecha = fecha;
-    }
 
 
     // Metodos

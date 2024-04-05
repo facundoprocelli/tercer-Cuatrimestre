@@ -15,7 +15,7 @@ public class Main {
         MaquinaExprendedora maquina = new MaquinaExprendedora();
 
         while (rta == 's') {
-
+            // Menu para sacer quien esta usando la maquina
             System.out.println("""
                     Menu administrador = 1
                     Menu Usuario = Otro
@@ -40,13 +40,14 @@ public class Main {
         char rta = 's';
         int op = 0;
 
-
+        // Menu de las opciones del administrador
         do {
             System.out.println("""
                     Ingresar precio del boleto = 1
-                    Ver Maquina = 2
-                    Retirar Dinero = 3
-                    Modificar Estado = 4
+                    Cambiar rollo de voletos = 2
+                    Ver Maquina = 3
+                    Retirar Dinero = 4
+                    Modificar Estado = 5
                     """);
             op = scan.nextInt();
 
@@ -56,26 +57,28 @@ public class Main {
                     maquina.setPrecio(scan.nextInt());
                     break;
                 case 2:
-                    System.out.println("Boletos disponibles " + maquina.getCantBoletosDisponibles());
-                    System.out.println("Recaucadión " + maquina. getRecaudacion());
-                    System.out.println("Estado de la maquina: " + maquina.recibirEstado());
-                    break;
+                    System.out.println("Ingrese la el tamaño del nuevo rollo");
+                    maquina.setCantBoletosDisponibles(scan.nextInt());
                 case 3:
-                    System.out.println(maquina.retirarDinero());
+                    resumenMaquina(maquina);
                     break;
                 case 4:
+                    System.out.println(maquina.retirarDinero());
+                    break;
+                case 5:
                     maquina.cambiarEstado();
                     System.out.println("Estado cambiado a " + maquina.recibirEstado());
 
             }
 
-            System.out.println("Ingrese 's' para seguir operando");
+            System.out.println("Ingrese 's' para seguir operando como administrador");
             rta = scan.next().charAt(0);
         }while (rta == 's');
 
     }
 
 
+    // Funciona para que el usuario interactue con la maquina
     public static void menuUsuario(MaquinaExprendedora maquina) {
 
             System.out.println("El precio del boelto es" + maquina.getPrecio());
@@ -90,6 +93,15 @@ public class Main {
 
             System.out.println("Su vuelto es " + maquina.getVuelto());
 
+            maquina.reiniciarVuelto();
 
+
+    }
+
+    public static void resumenMaquina(MaquinaExprendedora maquina){
+        System.out.println("Boletos disponibles " + maquina.getCantBoletosDisponibles());
+        System.out.println("Recaucadión " + maquina. getRecaudacion());
+        System.out.println("Estado de la maquina: " + maquina.recibirEstado());
+        System.out.println("Boletos vendidos: " + maquina.getBoletosVendidos());
     }
 }
