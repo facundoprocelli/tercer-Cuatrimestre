@@ -8,7 +8,7 @@ public class DVD extends Elemento {
     // Constructor
 
 
-    public DVD(String titulo, int duracion,boolean loTengo, String comentario, String director) {
+    public DVD(String titulo, int duracion, boolean loTengo, String comentario, String director) {
         super(titulo, duracion,loTengo, comentario); // El constructor va sin el punto
         this.director = director;
     }
@@ -16,13 +16,12 @@ public class DVD extends Elemento {
 
     }
 
+
+
     public String getDirector() {
         return director;
     }
 
-    public void setDirector(String director) {
-        this.director = director;
-    }
 
     public String imprimir(){
 

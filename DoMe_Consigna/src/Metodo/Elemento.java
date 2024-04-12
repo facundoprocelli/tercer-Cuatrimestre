@@ -19,10 +19,11 @@ public class Elemento {
         this.comentario = comentario;
     }
 
-    //Getters y Setters
-    public void setComentario(String comentario) {
-        this.comentario = comentario;
+    public Elemento(String titulo, int duracion, boolean loTengo, String comentario) {
     }
+
+    //Getters y Setters
+
 
     public String getComentario() {
         return comentario;
@@ -40,17 +41,11 @@ public class Elemento {
         return titulo;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
 
     public int getDuracion() {
         return duracion;
     }
 
-    public void setDuracion(int duracion) {
-        this.duracion = duracion;
-    }
     // Metodos
 
     public String imprimir(){

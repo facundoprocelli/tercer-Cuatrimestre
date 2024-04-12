@@ -33,13 +33,9 @@ public class CD extends Elemento{
         return numeroDeTemas;
     }
 
-    public void setInterprete(String interprete) {
-        this.interprete = interprete;
-    }
 
-    public void setNumeroDeTemas(int numeroDeTemas) {
-        this.numeroDeTemas = numeroDeTemas;
-    }
+
+
 
     public String imprimir(){
         return "\n" + super.imprimir() + "\nInterprete: " + getInterprete() + "\nNumero de Temas: " + getNumeroDeTemas();

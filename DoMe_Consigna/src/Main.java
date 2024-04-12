@@ -13,7 +13,7 @@ public class Main {
         DoMe dome = new DoMe();
 
         scan = new Scanner(System.in);
-            char rta = 's';
+        char rta = 's';
 
         do{  //Do while para que se puedan seguir cargando CD y DVD
             System.out.println("Ingresar DVD - 1\nIngresar CD - 2\nMostrar elementos - 3");
@@ -66,11 +66,11 @@ public class Main {
         char rta = 's';
         do{
 
-                Elemento ele = cargarElemento();
-                System.out.println("Ingrese el Director");
-                String auxDirector = (scan.nextLine());
+            Elemento ele = cargarElemento();
+            System.out.println("Ingrese el Director");
+            String auxDirector = (scan.nextLine());
 
-                dome.agregarDVDaArrayList(ele, auxDirector);
+            dome.agregarDVDaArrayList(ele, auxDirector);
 
             System.out.println("Para seguir agregando DVD ingrese 's'");
             rta = scan.next().charAt(0);
