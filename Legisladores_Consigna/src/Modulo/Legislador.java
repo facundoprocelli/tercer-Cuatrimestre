@@ -42,4 +42,6 @@ public abstract class Legislador extends Persona{
     }
 
 
+
+
 }

@@ -1,6 +1,5 @@
 import Modulo.Diputado;
 import Modulo.Legislador;
-import Modulo.Persona;
 import Modulo.Senador;
 
 import java.util.ArrayList;
@@ -24,6 +23,13 @@ public class Main {
             System.out.println("\n---------------------\n");
             System.out.println(e.getInfo());
             System.out.println("\n---------------------\n");
+        }
+
+        for(Legislador e: legisladores){
+            System.out.println("\n---------------------\n");
+            System.out.println(e.getCamaraQueTrabaja());
+            System.out.println("\n---------------------\n");
+
         }
 
     }
