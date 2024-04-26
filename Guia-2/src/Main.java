@@ -24,7 +24,7 @@ public class Main {
 
             System.out.println("Ingrese una opción para operar con la cuneta bancaria");
             opMenu();
-            int op = -1;
+            int op = scanner.nextInt();
             switch (op){
                 case 1:
                     cuenta = new Cuenta();
@@ -35,21 +35,25 @@ public class Main {
                     cuenta = new Cuenta(saldo);
                     break;
                 case 3:
+                    if(cuenta != null) {
                     System.out.println("Ingrese el saldo que desea depositar");
                     saldo = scanner.nextFloat();
-                    if(cuenta != null) {
+
                         cuenta.ingresar(saldo);
                     }
                     break;
                 case 4:
+                    if(cuenta != null ) {
                     System.out.println("Ingrese el saldo que desea retirar");
                     saldo = scanner.nextFloat();
-                    if(cuenta != null ) {
                         cuenta.extraer(saldo);
                     }
                     break;
                 case 5:
-                    cuenta.toString();
+                    if(cuenta != null) {
+                      String mensaje =  cuenta.toString();
+                        System.out.println(mensaje);
+                    }
                     break;
                 case 6:
                     cuenta = null;

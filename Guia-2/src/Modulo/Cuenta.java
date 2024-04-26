@@ -26,12 +26,12 @@ public class Cuenta {
     // Metodos
 
     public void ingresar(float saldo){
-        this.saldo += getSaldo() + saldo;
+        this.saldo += saldo;
     }
 
     public void extraer(float saldo){
         if(saldo < getSaldo()){
-            this.saldo -= getSaldo() + saldo;
+            this.saldo -=  saldo;
         }
     }
 
