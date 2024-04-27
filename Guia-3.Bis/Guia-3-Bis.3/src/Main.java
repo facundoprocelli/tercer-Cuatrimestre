@@ -18,6 +18,6 @@ public class Main {
 
         System.out.println(item);
 
-        System.out.println(" El precio todal por las unidades es: " + item.precioTotal(20));
+        System.out.println(" El precio todal por las unidades es: " +  item.precioTotal(20));
     }
 }
