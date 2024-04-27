@@ -1,6 +1,8 @@
 import Modelo.Cliente;
 import Modelo.Cuenta;
 
+import java.util.ArrayList;
+
 /*
 . Necesitamos crear un programa para manejar los datos de una Cuenta
 bancaria de un Cliente. Para esto identificamos los atributos id, nombre
@@ -49,7 +51,6 @@ public class Main {
         mensaje = cuentaBancaria.ingresar(0);
         System.out.println(mensaje);
         System.out.println(cuentaBancaria);
-
 
 
 
