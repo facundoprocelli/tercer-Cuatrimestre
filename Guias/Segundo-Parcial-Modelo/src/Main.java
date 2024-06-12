@@ -26,17 +26,12 @@ public class Main {
         System.out.println(jugs);
         //System.out.println(envolotrio);
 
-/*
+
         try{
             envolotrio.cantidadElementos("color", "green", 2);
         } catch (sobrePasaCantidadException e) {
             System.out.println(e);
         }
-
-
- */
-
-
 
     }
 

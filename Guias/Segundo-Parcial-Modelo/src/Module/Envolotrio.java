@@ -113,7 +113,6 @@ public class Envolotrio implements Serializable {
         } else {
             contenedorGenerico = tablaPosiciones;
         }
-
         if (contenedorGenerico.contar() > cantidad) {
             throw new sobrePasaCantidadException(tabla, key, contenedorGenerico.contar() - cantidad);
         }
