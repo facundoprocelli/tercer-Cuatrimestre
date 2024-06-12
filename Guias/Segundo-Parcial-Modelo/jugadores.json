@@ -1,0 +1,107 @@
+[
+  {
+    "_id": "5efe807064b613ae358eb0d0",
+    "guid": "a6b0aa96-5b03-49c2-b2ed-58e694ad75a7",
+    "isActive": true,
+    "balance": "$1,219.21",
+    "age": 20,
+    "eyeColor": "blue",
+    "name": {
+      "first": "Sallie",
+      "last": "Lewis"
+    },
+    "email": "sallie.lewis@undefined.ca",
+    "phone": "+54 223 (980) 488-3985",
+    "position": "tanque"
+  },
+  {
+    "_id": "5efe8070d2a4fcf8e97fd27b",
+    "guid": "1bf8b026-89e9-476c-b755-8f6901b99520",
+    "isActive": true,
+    "balance": "$3,525.84",
+    "age": 31,
+    "eyeColor": "brown",
+    "name": {
+      "first": "Cohen",
+      "last": "Ellison"
+    },
+    "email": "cohen.ellison@undefined.io",
+    "phone": "+54 223 (863) 438-3528",
+    "position": "curador"
+  },
+  {
+    "_id": "5efe807020110240f189104e",
+    "guid": "fdaf9d87-1582-47d5-869f-e22f2ca894b9",
+    "isActive": true,
+    "balance": "$1,688.48",
+    "age": 36,
+    "eyeColor": "green",
+    "name": {
+      "first": "Bette",
+      "last": "Bradley"
+    },
+    "email": "bette.bradley@undefined.net",
+    "phone": "+54 223 (887) 480-2119",
+    "position": "curador"
+  },
+  {
+    "_id": "5efe80705750adb080f7b96e",
+    "guid": "3bfb68f6-b096-451e-b2d3-209203597e16",
+    "isActive": false,
+    "balance": "$1,836.62",
+    "age": 33,
+    "eyeColor": "brown",
+    "name": {
+      "first": "Tessa",
+      "last": "Richardson"
+    },
+    "email": "tessa.richardson@undefined.me",
+    "phone": "+54 223 (966) 495-2766",
+    "position": "soporte"
+  },
+  {
+    "_id": "5efe80709c75ea7abbe2638f",
+    "guid": "4436beae-3ea7-49f7-805a-c1301291742c",
+    "isActive": true,
+    "balance": "$3,281.58",
+    "age": 36,
+    "eyeColor": "green",
+    "name": {
+      "first": "Esperanza",
+      "last": "Good"
+    },
+    "email": "esperanza.good@undefined.biz",
+    "phone": "+54 223 (883) 459-2541",
+    "position": "soporte"
+  },
+  {
+    "_id": "5efe807062d3b8f618ea13e1",
+    "guid": "1b3f3596-9dc0-401e-9ca7-6cbb60b9d99e",
+    "isActive": true,
+    "balance": "$3,322.65",
+    "age": 23,
+    "eyeColor": "blue",
+    "name": {
+      "first": "Blake",
+      "last": "Spence"
+    },
+    "email": "blake.spence@undefined.co.uk",
+    "phone": "+54 223 (866) 441-2888",
+    "position": "curador"
+  },
+  {
+    "_id": "5efe807092d31c97c3ad2f7c",
+    "guid": "537e0f00-1e4d-4587-8d81-dae041f72e25",
+    "isActive": false,
+    "balance": "$2,050.06",
+    "age": 38,
+    "eyeColor": "green",
+    "name": {
+      "first": "Hicks",
+      "last": "Diaz"
+    },
+    "email": "hicks.diaz@undefined.us",
+    "phone": "+54 223 (948) 523-3603",
+    "position": "soporte"
+  }
+]
