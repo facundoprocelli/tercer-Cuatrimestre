@@ -1,0 +1,89 @@
+1) Tenemos un JSON con trabajdores lo primero que necesitamos es bajar estos datos de el JSON a una estructura generica que sea conveniente 
+
+2) Luego hay que hacer un metodo que guarde en un diferentes archvios los trabajadores separados por los diferentes puestos que ocupan. Es necesario bajar los datos del archvio para demostrar que funciona correctamente.
+
+3) hacer una función que guarde en la estructura generica aquellos trabajadores que cumplan con determiando requisito enviado por parametro, si no cumple con el requisito se lanzar una excpción informando la razon por la que no pudo guardarse ese elemento 
+
+
+
+
+[
+  {
+    "_id": "5efe807064b613ae358eb0d0",
+    "name": "Juan",
+    "isActive": true,
+    "balance": "$1,219.21",
+    "age": 20,
+    "eyeColor": "blue",
+    "job": "Designer",
+    "contacts": {
+      "email": "sallie.lewis@undefined.ca",
+      "phone": "+54 223 (980) 488-3985"
+    }
+  },
+  {
+    "_id": "5efe807064b613ae358eb0d1",
+    "name": "Ana",
+    "isActive": false,
+    "balance": "$2,500.00",
+    "age": 25,
+    "eyeColor": "green",
+    "job": "Designer",
+    "contacts": {
+      "email": "ana.smith@undefined.ca",
+      "phone": "+54 223 (981) 123-4567"
+    }
+  },
+  {
+    "_id": "5efe807064b613ae358eb0d2",
+    "name": "Carlos",
+    "isActive": true,
+    "balance": "$3,750.50",
+    "age": 30,
+    "eyeColor": "brown",
+    "job": "Developer",
+    "contacts": {
+      "email": "carlos.gomez@undefined.ca",
+      "phone": "+54 223 (982) 234-5678"
+    }
+  },
+  {
+    "_id": "5efe807064b613ae358eb0d3",
+    "name": "Lucía",
+    "isActive": true,
+    "balance": "$4,100.75",
+    "age": 28,
+    "eyeColor": "hazel",
+    "job": "Developer",
+    "contacts": {
+      "email": "lucia.martinez@undefined.ca",
+      "phone": "+54 223 (983) 345-6789"
+    }
+  },
+  {
+    "_id": "5efe807064b613ae358eb0d4",
+    "name": "Mario",
+    "isActive": false,
+    "balance": "$1,500.00",
+    "age": 35,
+    "eyeColor": "blue",
+    "job": "Designer"
+    "contacts": {
+      "email": "mario.rossi@undefined.ca",
+      "phone": "+54 223 (984) 456-7890"
+    }
+  },
+  {
+    "_id": "5efe807064b613ae358eb0d5",
+    "name": "Laura",
+    "isActive": true,
+    "balance": "$2,800.80",
+    "age": 22,
+    "eyeColor": "brown",
+    "job": "Developer"
+    "contacts": {
+      "email": "laura.garcia@undefined.ca",
+      "phone": "+54 223 (985) 567-8901"
+    }
+  }
+]
