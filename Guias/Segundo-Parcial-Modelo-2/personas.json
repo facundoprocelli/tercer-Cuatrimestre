@@ -1,0 +1,194 @@
+[
+  {
+    "_id": "649233e6fa5bf2ef137e0225",
+    "isActive": true,
+    "balance": "$3,274.81",
+    "eyeColor": "brown",
+    "name": "Short Hendrix",
+    "gender": "male",
+    "age" : 23,
+    "tags": [
+      "labore",
+      "sit",
+      "mollit",
+      "amet",
+      "id",
+      "mollit",
+      "officia"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Kirby Mccray"
+      },
+      {
+        "id": 1,
+        "name": "Lindsay Harrell"
+      },
+      {
+        "id": 2,
+        "name": "Whitney Travis"
+      }
+    ]
+  },
+  {
+    "_id": "649233e6fd52b92412cb24cd",
+    "isActive": false,
+    "balance": "$2,044.19",
+    "eyeColor": "blue",
+    "name": "Charles Mayo",
+    "gender": "male",
+    "age" : 43,
+    "tags": [
+      "do",
+      "proident",
+      "ex",
+      "deserunt",
+      "officia",
+      "occaecat",
+      "occaecat"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Ila Poole"
+      },
+      {
+        "id": 1,
+        "name": "Robertson Alvarado"
+      },
+      {
+        "id": 2,
+        "name": "Polly Mckinney"
+      }
+    ]
+  },
+  {
+    "_id": "649233e6dcead6209c1b2eab",
+    "isActive": false,
+    "balance": "$2,642.81",
+    "eyeColor": "blue",
+    "name": "Jenny Chavez",
+    "gender": "female",
+    "age" : 34,
+    "tags": [
+      "occaecat",
+      "magna",
+      "aliqua",
+      "proident",
+      "commodo",
+      "veniam",
+      "non"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Bray Sanders"
+      },
+      {
+        "id": 1,
+        "name": "Alvarez Rasmussen"
+      },
+      {
+        "id": 2,
+        "name": "Harriett Stevens"
+      }
+    ]
+  },
+  {
+    "_id": "649233e6dca4d36d583922fe",
+    "isActive": true,
+    "balance": "$3,999.67",
+    "eyeColor": "blue",
+    "name": "Bush Roberson",
+    "gender": "male",
+    "age" : 28,
+    "tags": [
+      "non",
+      "excepteur",
+      "deserunt",
+      "reprehenderit",
+      "deserunt",
+      "dolor",
+      "et"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Workman Hubbard"
+      },
+      {
+        "id": 1,
+        "name": "Yesenia Griffith"
+      },
+      {
+        "id": 2,
+        "name": "Melisa Ballard"
+      }
+    ]
+  },
+  {
+    "_id": "649233e647fdbce27926c023",
+    "isActive": true,
+    "balance": "$1,534.67",
+    "eyeColor": "blue",
+    "name": "Cohen Shannon",
+    "gender": "male",
+    "age" : 16,
+    "tags": [
+      "excepteur",
+      "ad",
+      "reprehenderit",
+      "proident",
+      "cillum",
+      "id",
+      "in"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Jacqueline Ware"
+      },
+      {
+        "id": 1,
+        "name": "Flowers Mckee"
+      },
+      {
+        "id": 2,
+        "name": "Cheryl Mccullough"
+      }
+    ]
+  },
+  {
+    "_id": "649233e6bc7f30d793e9c73c",
+    "isActive": true,
+    "balance": "$3,537.54",
+    "eyeColor": "green",
+    "name": "Martinez Edwards",
+    "gender": "male",
+    "age" : 12,
+    "tags": [
+      "dolor",
+      "voluptate",
+      "adipisicing",
+      "ut",
+      "irure",
+      "elit",
+      "reprehenderit"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Leon Sutton"
+      },
+      {
+        "id": 1,
+        "name": "Bonnie Cummings"
+      },
+      {
+        "id": 2,
+        "name": "Deidre Avery"
+      }
+    ]
+  }
+]
