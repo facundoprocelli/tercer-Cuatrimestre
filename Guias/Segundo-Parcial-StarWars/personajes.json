@@ -1,0 +1,112 @@
+{
+  "personajes": [
+    {
+      "nombre": "Luke Skywalker",
+      "edad": 23,
+      "jedi": true,
+      "planeta_nacimiento": "Tatooine",
+      "maestro": {
+        "nombre": "Obi-Wan Kenobi",
+        "es_jedi": true,
+        "habilidades": ["Fuerza", "Sable de luz"]
+      },
+      "amigos": [
+        {
+          "nombre": "Han Solo",
+          "piloto": true,
+          "nave": {
+            "nombre": "Millennium Falcon",
+            "modelo": "YT-1300"
+          }
+        },
+        {
+          "nombre": "Leia Organa",
+          "piloto": false,
+          "nave": null
+        },
+        {
+          "nombre": "R2-D2",
+          "piloto": false,
+          "nave": null
+        }
+      ],
+      "eventos": [
+        {
+          "nombre": "Batalla de Yavin",
+          "anio": 0,
+          "ganada": true
+        },
+        {
+          "nombre": "Batalla de Hoth",
+          "anio": 3,
+          "ganada": false
+        },
+        {
+          "nombre": "Batalla de Endor",
+          "anio": 4,
+          "ganada": true
+        }
+      ]
+    },
+    {
+      "nombre": "Darth Vader",
+      "edad": 45,
+      "jedi": false,
+      "planeta_nacimiento": "Tatooine",
+      "maestro": {
+        "nombre": "Obi-Wan Kenobi",
+        "es_jedi": true,
+        "habilidades": ["Fuerza", "Sable de luz"]
+      },
+      "amigos": [
+        {
+          "nombre": "Emperor Palpatine",
+          "piloto": false,
+          "nave": null
+        }
+      ],
+      "eventos": [
+        {
+          "nombre": "Orden 66",
+          "anio": 19,
+          "ganada": true
+        },
+        {
+          "nombre": "Batalla de Endor",
+          "anio": 4,
+          "ganada": false
+        }
+      ]
+    },
+    {
+      "nombre": "Yoda",
+      "edad": 900,
+      "jedi": true,
+      "planeta_nacimiento": "Desconocido",
+      "maestro": {
+        "nombre": "Desconocido",
+        "es_jedi": true,
+        "habilidades": ["Fuerza", "Sabiduría"]
+      },
+      "amigos": [
+        {
+          "nombre": "Obi-Wan Kenobi",
+          "piloto": false,
+          "nave": null
+        }
+      ],
+      "eventos": [
+        {
+          "nombre": "Guerras Clon",
+          "anio": 22,
+          "ganada": true
+        },
+        {
+          "nombre": "Orden 66",
+          "anio": 19,
+          "ganada": false
+        }
+      ]
+    }
+  ]
+}
